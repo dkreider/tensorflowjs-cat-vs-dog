@@ -31,4 +31,10 @@ async function predict () {
 
 }
 
+function changeImage() {
+    var imageDisplay = document.getElementById('img');
+    var uploadedImage = document.getElementById('my-file-selector').files[0];
+    imageDisplay.src = URL.createObjectURL(uploadedImage);
+}
+
 initialize();
