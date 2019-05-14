@@ -3,7 +3,7 @@ var model = undefined;
 async function initialize() {
 
     console.log('Loading pre-trained model...');
-    model = await tf.loadLayersModel('tensorflowjs/model.json');
+    model = await tf.loadLayersModel('trained-model/model.json');
     console.log('Model successfully loaded...')
 
     document.getElementById('predict').addEventListener('click', () => predict());
