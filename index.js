@@ -15,9 +15,7 @@ async function initialize() {
 async function predict () {
 
     const imageElement = document.getElementById('img');
-    imageElement.width = 150;
-    imageElement.height = 150;
-    let tensorImg = tf.browser.fromPixels(imageElement).reshape([1, 150, 150, 3]);
+    let tensorImg = tf.browser.fromPixels(imageElement).resizeNearestNeighbor([150, 150]).toFloat().expandDims();
     prediction = await model.predict(tensorImg).data();
 
     if (prediction[0] == 0) {
@@ -31,9 +29,6 @@ async function predict () {
     } else {
         alert("Hummm... a weird error occurred.");
     }
-
-    imageElement.width = 375;
-    imageElement.height = 375;
 
 }
 
