@@ -1,10 +1,12 @@
 var model = undefined;
+const classifierElement = document.getElementById('classifier');
+const loaderElement = document.getElementById('loader');
 
 async function initialize() {
 
-    console.log('Loading pre-trained model...');
     model = await tf.loadLayersModel('trained-model/model.json');
-    console.log('Model successfully loaded...')
+    classifierElement.style.display = 'block';
+    loaderElement.style.display = 'none';
 
     document.getElementById('predict').addEventListener('click', () => predict());
 
