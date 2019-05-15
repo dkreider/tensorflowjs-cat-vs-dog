@@ -4,10 +4,9 @@ Classify a dog or cat image inside any browser. The classifier uses a pre-traine
 ![](img/cat-vs-dog-classifier.png) 
 
 ## Getting Started
-- `pip3 install SimpleHTTPServer`
 - `git clone https://github.com/dkreider/tensorflowjs-cat-vs-dog.git `
 - `cd tensorflowjs-cat-vs-dog`
-- `python -m SimpleHTTPServer`
+- `python3 -m http.server`
 - Open your browser to [localhost:8000](http://localhost:8000/)
 
 ## Built With
