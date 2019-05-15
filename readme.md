@@ -12,7 +12,7 @@ Classify a dog or cat image inside any browser. The classifier uses a pre-traine
 ## Built With
 
 * [Tensorflow.js](https://www.tensorflow.org/js)
-* [Keras](www.keras.io)
+* [Keras](https://www.tensorflow.org/guide/keras)
 * [Twitter Bootstrap](http://getbootstrap.com/)
 
 
